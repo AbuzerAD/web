@@ -141,6 +141,33 @@
   const featured = PROJECTS.slice(0, 5);
   let current = 0;
 
+  const projectCard = (project) => {
+    const media = project.image
+      ? `<img src="${project.image}" alt="${escapeHtml(project.alt)}" width="808" height="632" loading="lazy" decoding="async">`
+      : `<div class="work-card__tile" style="--tile-a:${project.tile[0]};--tile-b:${project.tile[1]}" aria-hidden="true"><span>${project.initials}</span></div>`;
+
+    return `
+      <article class="work-card" data-cats="${project.cats.join(" ")}" data-search="${escapeHtml(
+        `${project.title} ${project.client} ${project.summary} ${project.tools} ${project.cats.join(" ")}`.toLowerCase()
+      )}">
+        <a class="work-card__link" href="#p-${project.id}" data-project="${project.id}" aria-haspopup="dialog">
+          <div class="work-card__media">
+            ${media}
+            <span class="work-card__tag">${project.catLabel}</span>
+            <span class="work-card__open">Open case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__top">
+              <h3>${project.title}</h3>
+              <span class="work-card__arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+            <p>${project.summary}</p>
+            <span class="work-card__client">${project.client} · ${project.role.split("—")[0].trim()}</span>
+          </div>
+        </a>
+      </article>`;
+  };
+
   const goTo = (index) => {
     if (!track) return;
     current = (index + featured.length) % featured.length;
