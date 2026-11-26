@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		165C5351BBDB441FBFB32DA7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BEF542BB00461F90D9622F /* Theme.swift */; };
+		169BB6737E3C481EBF526B68 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8CBF9C4754F8DAE0F6179 /* Exercise.swift */; };
+		21CF3E696D244019882372F3 /* TrainerAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717EAA6BF20E4916AC57FA90 /* TrainerAuthView.swift */; };
+		235BF3CD9F1B4673999028B8 /* WorkoutsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19432FE426474683AACED6BC /* WorkoutsListView.swift */; };
+		3466DD85F2EA4233B9745001 /* ClientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D71674B824BB3873C9E97 /* ClientsListView.swift */; };
+		399C9116D62840DF98C6E56E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993308985F714CF4954E1C45 /* User.swift */; };
+		44C54871891F4A98B5C0DA0D /* TrainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F42E4512594D8B81F8A83E /* TrainerProfileView.swift */; };
+		46330CF9580D47519A9CBA61 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12E94A7A544AFFB3CA84AD /* WorkoutDetailView.swift */; };
+		4BC8E474B15C44F39B26B558 /* WorkoutBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5421AA0DDFA6424F995A5E62 /* WorkoutBuilderView.swift */; };
+		54BF0D83C283481CAB1C194D /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F685ED597D04FB88D7585EA /* ClientService.swift */; };
+		58A7279C85C64DDABF729EF5 /* ClientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B959CE4504B6596DCF49C /* ClientDetailView.swift */; };
+		5E59FE9F84634153BD91460A /* ExerciseSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0051D7617E74C11B56A4D51 /* ExerciseSeed.swift */; };
+		5F4320F3897046F7A6F34DF9 /* ClientOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA01FB3A4D746F0A16892F2 /* ClientOnboardingView.swift */; };
+		69137CB9A13C4A9ABC8C3E26 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C366959435A4AA4BA66C986 /* Workout.swift */; };
+		6C4777136C96492CBF3B5289 /* TrainerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD302948A24A858B7D0A05 /* TrainerRootView.swift */; };
+		794BFB8B247D4017A6D3948A /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C3839A49788AB354B3 /* ProgressService.swift */; };
+		97926F4C9F334322B6CC3FA9 /* ExerciseLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FCC2DAD56436A91E3E6CB /* ExerciseLibraryView.swift */; };
+		A29F9ED476E34826BDE8E5D5 /* ExerciseLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB790210F0048479F1C39E9 /* ExerciseLibraryService.swift */; };
+		A4F993C08C5B4AA6BD23E476 /* PTModeTrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21550FE094B61B1E81C61 /* PTModeTrainerApp.swift */; };
+		A8CC7F978AE749EDA4F0B56C /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7154C4348DCAC1D89E4 /* WorkoutService.swift */; };
+		A953B26A56224C5E9A422EA7 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D89F0F3FE4363AA045EAD /* BackendService.swift */; };
+		AB7134CE0ACF430D869A6534 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AF3E158142402AAFDE3369 /* Session.swift */; };
+		BF24C207078C47D4A662420B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8B2969E4B4A2B90BE9214 /* Components.swift */; };
+		DBDABFD72BDB4F92BC3E4B7D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD424C0BAA94BF1B46C5783 /* AuthService.swift */; };
+		ED01E905CCB44FE7ADD4EA11 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE4A6F20F040B5BE9E2F58 /* Progress.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07B8CBF9C4754F8DAE0F6179 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Exercise.swift"; sourceTree = "<absolute>"; };
+		0C366959435A4AA4BA66C986 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Workout.swift"; sourceTree = "<absolute>"; };
+		19432FE426474683AACED6BC /* WorkoutsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutsListView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Workouts/WorkoutsListView.swift"; sourceTree = "<absolute>"; };
+		260D71674B824BB3873C9E97 /* ClientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientsListView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Clients/ClientsListView.swift"; sourceTree = "<absolute>"; };
+		3F685ED597D04FB88D7585EA /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientService.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/ClientService.swift"; sourceTree = "<absolute>"; };
+		43F42E4512594D8B81F8A83E /* TrainerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerProfileView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Shared/TrainerProfileView.swift"; sourceTree = "<absolute>"; };
+		45F21550FE094B61B1E81C61 /* PTModeTrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PTModeTrainerApp.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/App/PTModeTrainerApp.swift"; sourceTree = "<absolute>"; };
+		4AE83FF76F554783AEC51E91 /* PTModeTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTModeTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5421AA0DDFA6424F995A5E62 /* WorkoutBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutBuilderView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Workouts/WorkoutBuilderView.swift"; sourceTree = "<absolute>"; };
+		55AF3E158142402AAFDE3369 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Session.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Session.swift"; sourceTree = "<absolute>"; };
+		58F8B2969E4B4A2B90BE9214 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Components.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/DesignSystem/Components.swift"; sourceTree = "<absolute>"; };
+		5EBD302948A24A858B7D0A05 /* TrainerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerRootView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Shared/TrainerRootView.swift"; sourceTree = "<absolute>"; };
+		6EC2A7154C4348DCAC1D89E4 /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutService.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/WorkoutService.swift"; sourceTree = "<absolute>"; };
+		717EAA6BF20E4916AC57FA90 /* TrainerAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainerAuthView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Auth/TrainerAuthView.swift"; sourceTree = "<absolute>"; };
+		745D89F0F3FE4363AA045EAD /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendService.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Networking/BackendService.swift"; sourceTree = "<absolute>"; };
+		7B3BB0C3839A49788AB354B3 /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressService.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/ProgressService.swift"; sourceTree = "<absolute>"; };
+		8A12E94A7A544AFFB3CA84AD /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutDetailView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Workouts/WorkoutDetailView.swift"; sourceTree = "<absolute>"; };
+		975FCC2DAD56436A91E3E6CB /* ExerciseLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseLibraryView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Exercises/ExerciseLibraryView.swift"; sourceTree = "<absolute>"; };
+		993308985F714CF4954E1C45 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/User.swift"; sourceTree = "<absolute>"; };
+		A9BEF542BB00461F90D9622F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/DesignSystem/Theme.swift"; sourceTree = "<absolute>"; };
+		ACB790210F0048479F1C39E9 /* ExerciseLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseLibraryService.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/ExerciseLibraryService.swift"; sourceTree = "<absolute>"; };
+		AF1B959CE4504B6596DCF49C /* ClientDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientDetailView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Clients/ClientDetailView.swift"; sourceTree = "<absolute>"; };
+		B0051D7617E74C11B56A4D51 /* ExerciseSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseSeed.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/ExerciseSeed.swift"; sourceTree = "<absolute>"; };
+		C9DE4A6F20F040B5BE9E2F58 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Progress.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Progress.swift"; sourceTree = "<absolute>"; };
+		EAA01FB3A4D746F0A16892F2 /* ClientOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientOnboardingView.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeTrainer/Views/Clients/ClientOnboardingView.swift"; sourceTree = "<absolute>"; };
+		FCD424C0BAA94BF1B46C5783 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/AuthService.swift"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F760F16D0A1D4673B05A80A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24FEE8532475482787F6B97D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AE83FF76F554783AEC51E91 /* PTModeTrainer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EE54DBCA76E4AA7AF904C36 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				45F21550FE094B61B1E81C61 /* PTModeTrainerApp.swift */,
+				717EAA6BF20E4916AC57FA90 /* TrainerAuthView.swift */,
+				AF1B959CE4504B6596DCF49C /* ClientDetailView.swift */,
+				EAA01FB3A4D746F0A16892F2 /* ClientOnboardingView.swift */,
+				260D71674B824BB3873C9E97 /* ClientsListView.swift */,
+				975FCC2DAD56436A91E3E6CB /* ExerciseLibraryView.swift */,
+				43F42E4512594D8B81F8A83E /* TrainerProfileView.swift */,
+				5EBD302948A24A858B7D0A05 /* TrainerRootView.swift */,
+				5421AA0DDFA6424F995A5E62 /* WorkoutBuilderView.swift */,
+				8A12E94A7A544AFFB3CA84AD /* WorkoutDetailView.swift */,
+				19432FE426474683AACED6BC /* WorkoutsListView.swift */,
+				58F8B2969E4B4A2B90BE9214 /* Components.swift */,
+				A9BEF542BB00461F90D9622F /* Theme.swift */,
+				07B8CBF9C4754F8DAE0F6179 /* Exercise.swift */,
+				B0051D7617E74C11B56A4D51 /* ExerciseSeed.swift */,
+				C9DE4A6F20F040B5BE9E2F58 /* Progress.swift */,
+				55AF3E158142402AAFDE3369 /* Session.swift */,
+				993308985F714CF4954E1C45 /* User.swift */,
+				0C366959435A4AA4BA66C986 /* Workout.swift */,
+				745D89F0F3FE4363AA045EAD /* BackendService.swift */,
+				FCD424C0BAA94BF1B46C5783 /* AuthService.swift */,
+				3F685ED597D04FB88D7585EA /* ClientService.swift */,
+				ACB790210F0048479F1C39E9 /* ExerciseLibraryService.swift */,
+				7B3BB0C3839A49788AB354B3 /* ProgressService.swift */,
+				6EC2A7154C4348DCAC1D89E4 /* WorkoutService.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		F59B5FEF2F464A658A89C891 = {
+			isa = PBXGroup;
+			children = (
+				8EE54DBCA76E4AA7AF904C36 /* Sources */,
+				24FEE8532475482787F6B97D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EA579E33CD448B198EE16C3 /* PTModeTrainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFB6EC7953484FD9BE963E5C /* Build configuration list for PBXNativeTarget "PTModeTrainer" */;
+			buildPhases = (
+				D5AD8E2CB0D146439D978994 /* Sources */,
+				F760F16D0A1D4673B05A80A3 /* Frameworks */,
+				2D8E17B0215640A79B292470 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTModeTrainer;
+			productName = PTModeTrainer;
+			productReference = 4AE83FF76F554783AEC51E91 /* PTModeTrainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D584D1A3F0DA4BB680AB9243 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					6EA579E33CD448B198EE16C3 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 888CD9E122144541A6473771 /* Build configuration list for PBXProject "PTModeTrainer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F59B5FEF2F464A658A89C891;
+			productRefGroup = 24FEE8532475482787F6B97D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EA579E33CD448B198EE16C3 /* PTModeTrainer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D8E17B0215640A79B292470 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5AD8E2CB0D146439D978994 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F993C08C5B4AA6BD23E476 /* PTModeTrainerApp.swift in Sources */,
+				21CF3E696D244019882372F3 /* TrainerAuthView.swift in Sources */,
+				58A7279C85C64DDABF729EF5 /* ClientDetailView.swift in Sources */,
+				5F4320F3897046F7A6F34DF9 /* ClientOnboardingView.swift in Sources */,
+				3466DD85F2EA4233B9745001 /* ClientsListView.swift in Sources */,
+				97926F4C9F334322B6CC3FA9 /* ExerciseLibraryView.swift in Sources */,
+				44C54871891F4A98B5C0DA0D /* TrainerProfileView.swift in Sources */,
+				6C4777136C96492CBF3B5289 /* TrainerRootView.swift in Sources */,
+				4BC8E474B15C44F39B26B558 /* WorkoutBuilderView.swift in Sources */,
+				46330CF9580D47519A9CBA61 /* WorkoutDetailView.swift in Sources */,
+				235BF3CD9F1B4673999028B8 /* WorkoutsListView.swift in Sources */,
+				BF24C207078C47D4A662420B /* Components.swift in Sources */,
+				165C5351BBDB441FBFB32DA7 /* Theme.swift in Sources */,
+				169BB6737E3C481EBF526B68 /* Exercise.swift in Sources */,
+				5E59FE9F84634153BD91460A /* ExerciseSeed.swift in Sources */,
+				ED01E905CCB44FE7ADD4EA11 /* Progress.swift in Sources */,
+				AB7134CE0ACF430D869A6534 /* Session.swift in Sources */,
+				399C9116D62840DF98C6E56E /* User.swift in Sources */,
+				69137CB9A13C4A9ABC8C3E26 /* Workout.swift in Sources */,
+				A953B26A56224C5E9A422EA7 /* BackendService.swift in Sources */,
+				DBDABFD72BDB4F92BC3E4B7D /* AuthService.swift in Sources */,
+				54BF0D83C283481CAB1C194D /* ClientService.swift in Sources */,
+				A29F9ED476E34826BDE8E5D5 /* ExerciseLibraryService.swift in Sources */,
+				794BFB8B247D4017A6D3948A /* ProgressService.swift in Sources */,
+				A8CC7F978AE749EDA4F0B56C /* WorkoutService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B28C3C82F7B84D2BBC50EE8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ptmode.ptmodetrainer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEA459C2910A4671970A31B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		D1684356E6A44090B62D971A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F15AC2A0D3AA472A9AB416D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ptmode.ptmodetrainer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		888CD9E122144541A6473771 /* Build configuration list for PBXProject "PTModeTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA459C2910A4671970A31B5 /* Debug */,
+				D1684356E6A44090B62D971A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFB6EC7953484FD9BE963E5C /* Build configuration list for PBXNativeTarget "PTModeTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15AC2A0D3AA472A9AB416D8 /* Debug */,
+				B28C3C82F7B84D2BBC50EE8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D584D1A3F0DA4BB680AB9243 /* Project object */;
+}

@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CE5CE9A72A04AA6B5D5AB6B /* PTModeClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006E8A8C6DC4558A6D085CB /* PTModeClientApp.swift */; };
+		F8F89F7F800F4A78AB291B2D /* ClientAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2FC0B4F12425CAE138BAB /* ClientAuthView.swift */; };
+		E0C2A9E770B2453E81EF9074 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BC151F3E45449688C49C2A /* HistoryView.swift */; };
+		3C93331358D14FC6ADDC8243 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1BC77D1B049CA8AB24B73 /* HomeView.swift */; };
+		0C82E931B14D442A9167DD59 /* ProgressViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A6C1EF8F0464792E9F2A1 /* ProgressViewScreen.swift */; };
+		F9E0B6F9C41C4C22B683B39E /* ClientProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A7F94D3947489C127011 /* ClientProfileView.swift */; };
+		298DD1291178445489CAFD22 /* ClientRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187A4FFA74D129860709C /* ClientRootView.swift */; };
+		886BAD50100B4FDAADA911D9 /* WorkoutPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B63E35BAB2428681435CFC /* WorkoutPlayerView.swift */; };
+		A9C55D23C1B3462CB789F4D6 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36BC02A77740D0A21C6F69 /* Components.swift */; };
+		A23196FBFC7B4238B9177735 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A066AEC3CB74716B10A2835 /* Theme.swift */; };
+		4707C7E7301E4B67A139DE44 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B01B493736947DC8D1FAEFE /* Exercise.swift */; };
+		8F4547EC01EA45B1A9E1EB00 /* ExerciseSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C822356AD754DC49F05A1DB /* ExerciseSeed.swift */; };
+		A3A42FC8AB234646899F8532 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9323964BB430AA860E7EF /* Progress.swift */; };
+		5BE44C04E7694EA3A52276B2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C844E63CD084E2087B233C2 /* Session.swift */; };
+		F63987221BB64BB1AFBA8037 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8235E4ECE004468A9C3667D /* User.swift */; };
+		3992DA1B33D24FC7BBFE1E93 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B20B06CE7B4A4C913E6E2B /* Workout.swift */; };
+		FBFDB08143684C4AA0FE1610 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED47BAEE7CC74F4CB651DD85 /* BackendService.swift */; };
+		6A673E80B0794CCD9EBF3A49 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3288F9E012D64E36B336916D /* AuthService.swift */; };
+		1BE56BD025414BFEB330C484 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC55957B0C94E48BB229A74 /* ClientService.swift */; };
+		6F5A6DBF32F44A78910AC315 /* ExerciseLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA98437ED9405FB5182F56 /* ExerciseLibraryService.swift */; };
+		2B6BD84CD5BC4727B5944721 /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119CF045C0B411EA6BDC704 /* ProgressService.swift */; };
+		1EE5B224EFF842B48484078A /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C741BB027427C8976188C /* WorkoutService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A9D29FA4DBD4C9BB9A14C79 /* PTModeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTModeClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F006E8A8C6DC4558A6D085CB /* PTModeClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PTModeClientApp.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/App/PTModeClientApp.swift"; sourceTree = "<absolute>"; };
+		87E2FC0B4F12425CAE138BAB /* ClientAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClientAuthView.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/Auth/ClientAuthView.swift"; sourceTree = "<absolute>"; };
+		C5BC151F3E45449688C49C2A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "HistoryView.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/History/HistoryView.swift"; sourceTree = "<absolute>"; };
+		9AD1BC77D1B049CA8AB24B73 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "HomeView.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/Home/HomeView.swift"; sourceTree = "<absolute>"; };
+		1D4A6C1EF8F0464792E9F2A1 /* ProgressViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProgressViewScreen.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/Progress/ProgressViewScreen.swift"; sourceTree = "<absolute>"; };
+		EE44A7F94D3947489C127011 /* ClientProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClientProfileView.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/Shared/ClientProfileView.swift"; sourceTree = "<absolute>"; };
+		52E187A4FFA74D129860709C /* ClientRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClientRootView.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/Shared/ClientRootView.swift"; sourceTree = "<absolute>"; };
+		00B63E35BAB2428681435CFC /* WorkoutPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkoutPlayerView.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeClient/Views/Workout/WorkoutPlayerView.swift"; sourceTree = "<absolute>"; };
+		7E36BC02A77740D0A21C6F69 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Components.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/DesignSystem/Components.swift"; sourceTree = "<absolute>"; };
+		3A066AEC3CB74716B10A2835 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Theme.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/DesignSystem/Theme.swift"; sourceTree = "<absolute>"; };
+		1B01B493736947DC8D1FAEFE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Exercise.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Exercise.swift"; sourceTree = "<absolute>"; };
+		1C822356AD754DC49F05A1DB /* ExerciseSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExerciseSeed.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/ExerciseSeed.swift"; sourceTree = "<absolute>"; };
+		B1A9323964BB430AA860E7EF /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Progress.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Progress.swift"; sourceTree = "<absolute>"; };
+		1C844E63CD084E2087B233C2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Session.swift"; sourceTree = "<absolute>"; };
+		F8235E4ECE004468A9C3667D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/User.swift"; sourceTree = "<absolute>"; };
+		78B20B06CE7B4A4C913E6E2B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Models/Workout.swift"; sourceTree = "<absolute>"; };
+		ED47BAEE7CC74F4CB651DD85 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BackendService.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Networking/BackendService.swift"; sourceTree = "<absolute>"; };
+		3288F9E012D64E36B336916D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AuthService.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/AuthService.swift"; sourceTree = "<absolute>"; };
+		5AC55957B0C94E48BB229A74 /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClientService.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/ClientService.swift"; sourceTree = "<absolute>"; };
+		30FA98437ED9405FB5182F56 /* ExerciseLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExerciseLibraryService.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/ExerciseLibraryService.swift"; sourceTree = "<absolute>"; };
+		F119CF045C0B411EA6BDC704 /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProgressService.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/ProgressService.swift"; sourceTree = "<absolute>"; };
+		821C741BB027427C8976188C /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorkoutService.swift"; path = "/Users/abuzerditta/Documents/Default Project/PTMode/PTModeCore/Sources/PTModeCore/Services/WorkoutService.swift"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66194483D13E41258A58FB02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D30C7A2AABA54EC7873492F0 = {
+			isa = PBXGroup;
+			children = (
+				FDF3A339B6674C22AC7310E3 /* Sources */,
+				E940676C6B6A4C278C4C57C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDF3A339B6674C22AC7310E3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F006E8A8C6DC4558A6D085CB /* PTModeClientApp.swift */,
+				87E2FC0B4F12425CAE138BAB /* ClientAuthView.swift */,
+				C5BC151F3E45449688C49C2A /* HistoryView.swift */,
+				9AD1BC77D1B049CA8AB24B73 /* HomeView.swift */,
+				1D4A6C1EF8F0464792E9F2A1 /* ProgressViewScreen.swift */,
+				EE44A7F94D3947489C127011 /* ClientProfileView.swift */,
+				52E187A4FFA74D129860709C /* ClientRootView.swift */,
+				00B63E35BAB2428681435CFC /* WorkoutPlayerView.swift */,
+				7E36BC02A77740D0A21C6F69 /* Components.swift */,
+				3A066AEC3CB74716B10A2835 /* Theme.swift */,
+				1B01B493736947DC8D1FAEFE /* Exercise.swift */,
+				1C822356AD754DC49F05A1DB /* ExerciseSeed.swift */,
+				B1A9323964BB430AA860E7EF /* Progress.swift */,
+				1C844E63CD084E2087B233C2 /* Session.swift */,
+				F8235E4ECE004468A9C3667D /* User.swift */,
+				78B20B06CE7B4A4C913E6E2B /* Workout.swift */,
+				ED47BAEE7CC74F4CB651DD85 /* BackendService.swift */,
+				3288F9E012D64E36B336916D /* AuthService.swift */,
+				5AC55957B0C94E48BB229A74 /* ClientService.swift */,
+				30FA98437ED9405FB5182F56 /* ExerciseLibraryService.swift */,
+				F119CF045C0B411EA6BDC704 /* ProgressService.swift */,
+				821C741BB027427C8976188C /* WorkoutService.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		E940676C6B6A4C278C4C57C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D29FA4DBD4C9BB9A14C79 /* PTModeClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EF3CB7FD0C74BC6A933AAC6 /* PTModeClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 399D20D54F43457F88375E89 /* Build configuration list for PBXNativeTarget "PTModeClient" */;
+			buildPhases = (
+				8E3D63E1DBF5470B8CC98462 /* Sources */,
+				66194483D13E41258A58FB02 /* Frameworks */,
+				0FCDDCF49D4042C4856BEC21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PTModeClient";
+			productName = "PTModeClient";
+			productReference = 2A9D29FA4DBD4C9BB9A14C79 /* PTModeClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		317FF0338CFE49C4BF85AED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5EF3CB7FD0C74BC6A933AAC6 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 336BC3A76D594238859397CB /* Build configuration list for PBXProject "PTModeClient" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D30C7A2AABA54EC7873492F0;
+			productRefGroup = E940676C6B6A4C278C4C57C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EF3CB7FD0C74BC6A933AAC6 /* PTModeClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0FCDDCF49D4042C4856BEC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E3D63E1DBF5470B8CC98462 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE5CE9A72A04AA6B5D5AB6B /* PTModeClientApp.swift in Sources */,
+				F8F89F7F800F4A78AB291B2D /* ClientAuthView.swift in Sources */,
+				E0C2A9E770B2453E81EF9074 /* HistoryView.swift in Sources */,
+				3C93331358D14FC6ADDC8243 /* HomeView.swift in Sources */,
+				0C82E931B14D442A9167DD59 /* ProgressViewScreen.swift in Sources */,
+				F9E0B6F9C41C4C22B683B39E /* ClientProfileView.swift in Sources */,
+				298DD1291178445489CAFD22 /* ClientRootView.swift in Sources */,
+				886BAD50100B4FDAADA911D9 /* WorkoutPlayerView.swift in Sources */,
+				A9C55D23C1B3462CB789F4D6 /* Components.swift in Sources */,
+				A23196FBFC7B4238B9177735 /* Theme.swift in Sources */,
+				4707C7E7301E4B67A139DE44 /* Exercise.swift in Sources */,
+				8F4547EC01EA45B1A9E1EB00 /* ExerciseSeed.swift in Sources */,
+				A3A42FC8AB234646899F8532 /* Progress.swift in Sources */,
+				5BE44C04E7694EA3A52276B2 /* Session.swift in Sources */,
+				F63987221BB64BB1AFBA8037 /* User.swift in Sources */,
+				3992DA1B33D24FC7BBFE1E93 /* Workout.swift in Sources */,
+				FBFDB08143684C4AA0FE1610 /* BackendService.swift in Sources */,
+				6A673E80B0794CCD9EBF3A49 /* AuthService.swift in Sources */,
+				1BE56BD025414BFEB330C484 /* ClientService.swift in Sources */,
+				6F5A6DBF32F44A78910AC315 /* ExerciseLibraryService.swift in Sources */,
+				2B6BD84CD5BC4727B5944721 /* ProgressService.swift in Sources */,
+				1EE5B224EFF842B48484078A /* WorkoutService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		90285DACD19140FABBDA5436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		BC42788BC8B142C08E4CC01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D2705A0670440359908085C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptmode.ptmodeclient";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC7523F597C04C38AB5B7215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptmode.ptmodeclient";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		336BC3A76D594238859397CB /* Build configuration list for PBXProject "PTModeClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90285DACD19140FABBDA5436 /* Debug */,
+				BC42788BC8B142C08E4CC01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		399D20D54F43457F88375E89 /* Build configuration list for PBXNativeTarget "PTModeClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D2705A0670440359908085C /* Debug */,
+				BC7523F597C04C38AB5B7215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 317FF0338CFE49C4BF85AED7 /* Project object */;
+}

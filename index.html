@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20261118x" />
+<link rel="stylesheet" href="styles.css?v=20261118y" />
 <script>document.documentElement.classList.replace("no-js", "js");</script>
 </head>
 <body>
@@ -245,40 +245,26 @@
         <p class="eyebrow">Selected work</p>
         <h2>Products, platforms and brands.</h2>
         <p class="section-lede">
-          Fifteen projects from 15 years of shipping with agencies, consultancies and startups.
-          Open any card for a quick look, or read the full case studies.
-          <a class="section-head__link" href="work/index.html">All case studies <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          Five featured projects from 15 years of shipping with agencies, consultancies and startups.
+          Open any card for a quick look, or browse the full library.
+          <a class="section-head__link" href="work/index.html">All 15 case studies <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </p>
       </header>
 
-      <div class="work-toolbar reveal">
-        <div class="chips" id="work-filters" role="group" aria-label="Filter projects by discipline">
-          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All <span class="chip__count">14</span></button>
-          <button class="chip" type="button" data-filter="product" aria-pressed="false">Product <span class="chip__count"></span></button>
-          <button class="chip" type="button" data-filter="mobile" aria-pressed="false">Mobile <span class="chip__count"></span></button>
-          <button class="chip" type="button" data-filter="web" aria-pressed="false">Web <span class="chip__count"></span></button>
-          <button class="chip" type="button" data-filter="brand" aria-pressed="false">Brand <span class="chip__count"></span></button>
-        </div>
-        <label class="search">
-          <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
-          <input type="search" id="work-search" placeholder="Search projects" aria-label="Search projects" autocomplete="off" />
-        </label>
+      <div class="work-carousel reveal" id="work-carousel" aria-roledescription="carousel" aria-label="Selected projects">
+        <div class="work-carousel__track" id="work-carousel-track"></div>
+        <button class="work-carousel__btn work-carousel__btn--prev" type="button" id="work-prev" aria-label="Previous project">
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow" style="transform:rotate(180deg)"/></svg>
+        </button>
+        <button class="work-carousel__btn work-carousel__btn--next" type="button" id="work-next" aria-label="Next project">
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </button>
+        <div class="work-carousel__dots" id="work-dots" role="tablist" aria-label="Choose project"></div>
       </div>
 
-      <p class="work-count" id="work-count" aria-live="polite"></p>
-
-      <div class="work-grid" id="work-grid">
-        <noscript>
-          <p>This portfolio needs JavaScript for filtering and case-study views. You can browse the same work on
-            <a href="https://www.behance.net/abuzerad">Behance</a> or
-            <a href="https://dribbble.com/abuzerad">Dribbble</a>.
-          </p>
-        </noscript>
-      </div>
-
-      <div class="work-empty" id="work-empty" hidden>
-        <p>No projects match that search.</p>
-        <button class="btn btn--ghost" type="button" id="work-reset">Clear filters</button>
+      <div class="work-cta reveal">
+        <a class="btn btn--mint" href="work/index.html">Browse all 15 case studies <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <span class="work-cta__note">Product, mobile, web and brand — filterable, searchable, with full case studies.</span>
       </div>
     </div>
   </section>
@@ -1315,7 +1301,7 @@
   <svg class="ico" aria-hidden="true"><use href="#i-up"/></svg>
 </button>
 
-<script src="data/projects.js?v=20261118x"></script>
-<script src="script.js?v=20261118x"></script>
+<script src="data/projects.js?v=20261118y"></script>
+<script src="script.js?v=20261118y"></script>
 </body>
 </html>

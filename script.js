@@ -132,122 +132,56 @@
   }
 
   /* ---------------------------------------------------------
-     Work grid
+     Work carousel (top 5)
      --------------------------------------------------------- */
-  const grid = $("#work-grid");
-  const countEl = $("#work-count");
-  const emptyEl = $("#work-empty");
-  const searchInput = $("#work-search");
-  const filterGroup = $("#work-filters");
-  let activeFilter = "all";
-  let searchTerm = "";
+  const track = $("#work-carousel-track");
+  const prevBtn = $("#work-prev");
+  const nextBtn = $("#work-next");
+  const dotsEl = $("#work-dots");
+  const featured = PROJECTS.slice(0, 5);
+  let current = 0;
 
-  const projectCard = (project) => {
-    const media = project.image
-      ? `<img src="${project.image}" alt="${escapeHtml(project.alt)}" width="808" height="632" loading="lazy" decoding="async">`
-      : `<div class="work-card__tile" style="--tile-a:${project.tile[0]};--tile-b:${project.tile[1]}" aria-hidden="true"><span>${project.initials}</span></div>`;
-
-    return `
-      <article class="work-card" data-cats="${project.cats.join(" ")}" data-search="${escapeHtml(
-        `${project.title} ${project.client} ${project.summary} ${project.tools} ${project.cats.join(" ")}`.toLowerCase()
-      )}">
-        <a class="work-card__link" href="#p-${project.id}" data-project="${project.id}" aria-haspopup="dialog">
-          <div class="work-card__media">
-            ${media}
-            <span class="work-card__tag">${project.catLabel}</span>
-            <span class="work-card__open">Open case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
-          </div>
-          <div class="work-card__body">
-            <div class="work-card__top">
-              <h3>${project.title}</h3>
-              <span class="work-card__arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
-            </div>
-            <p>${project.summary}</p>
-            <span class="work-card__client">${project.client} · ${project.role.split("—")[0].trim()}</span>
-          </div>
-        </a>
-      </article>`;
+  const goTo = (index) => {
+    if (!track) return;
+    current = (index + featured.length) % featured.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    if (dotsEl) {
+      $$(".work-carousel__dot", dotsEl).forEach((dot, i) => {
+        const active = i === current;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", String(active));
+      });
+    }
   };
 
-  const applyFilters = () => {
-    if (!grid) return;
-    let shown = 0;
-    const cards = $$(".work-card", grid);
+  if (track) {
+    track.innerHTML = featured.map((project) => `
+      <div class="work-carousel__slide">
+        ${projectCard(project)}
+      </div>`).join("");
 
-    cards.forEach((card) => {
-      const cats = (card.dataset.cats || "").split(" ");
-      const matchesCat = activeFilter === "all" || cats.includes(activeFilter);
-      const matchesText = !searchTerm || (card.dataset.search || "").includes(searchTerm);
-      const visible = matchesCat && matchesText;
-      card.hidden = !visible;
-      if (visible) {
-        card.style.setProperty("--i", `${Math.min(shown, 8) * 45}ms`);
-        shown += 1;
-      }
-    });
-
-    if (countEl) {
-      countEl.textContent = `Showing ${shown} of ${PROJECTS.length} projects`;
-    }
-    if (emptyEl) emptyEl.hidden = shown !== 0;
-  };
-
-  if (grid) {
-    grid.innerHTML = PROJECTS.map(projectCard).join("");
-
-    if (filterGroup) {
-      $$(".chip", filterGroup).forEach((chip) => {
-        const filter = chip.dataset.filter;
-        const total = filter === "all"
-          ? PROJECTS.length
-          : PROJECTS.filter((project) => project.cats.includes(filter)).length;
-        const count = $(".chip__count", chip);
-        if (count) count.textContent = String(total);
-      });
-
-      filterGroup.addEventListener("click", (event) => {
-        const chip = event.target.closest(".chip");
-        if (!chip) return;
-        activeFilter = chip.dataset.filter;
-        $$(".chip", filterGroup).forEach((item) => {
-          const active = item === chip;
-          item.classList.toggle("is-active", active);
-          item.setAttribute("aria-pressed", String(active));
-        });
-        applyFilters();
+    if (dotsEl) {
+      dotsEl.innerHTML = featured.map((project, i) => `
+        <button class="work-carousel__dot" type="button" role="tab"
+          aria-label="Show ${escapeHtml(project.title)}" aria-selected="${i === 0 ? "true" : "false"}">
+        </button>`).join("");
+      $$(".work-carousel__dot", dotsEl).forEach((dot, i) => {
+        dot.addEventListener("click", () => goTo(i));
       });
     }
 
-    let searchTimer = 0;
-    if (searchInput) {
-      searchInput.addEventListener("input", () => {
-        window.clearTimeout(searchTimer);
-        searchTimer = window.setTimeout(() => {
-          searchTerm = searchInput.value.trim().toLowerCase();
-          applyFilters();
-        }, 120);
+    if (prevBtn) prevBtn.addEventListener("click", () => goTo(current - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => goTo(current + 1));
+
+    const carousel = $("#work-carousel");
+    if (carousel) {
+      carousel.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") { event.preventDefault(); goTo(current - 1); }
+        if (event.key === "ArrowRight") { event.preventDefault(); goTo(current + 1); }
       });
     }
 
-    const reset = $("#work-reset");
-    if (reset) {
-      reset.addEventListener("click", () => {
-        activeFilter = "all";
-        searchTerm = "";
-        if (searchInput) searchInput.value = "";
-        if (filterGroup) {
-          $$(".chip", filterGroup).forEach((chip) => {
-            const active = chip.dataset.filter === "all";
-            chip.classList.toggle("is-active", active);
-            chip.setAttribute("aria-pressed", String(active));
-          });
-        }
-        applyFilters();
-        if (searchInput) searchInput.focus();
-      });
-    }
-
-    applyFilters();
+    goTo(0);
   }
 
   /* ---------------------------------------------------------

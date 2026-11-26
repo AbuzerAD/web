@@ -2924,3 +2924,78 @@ dialog::backdrop {
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { transform: none; }
 }
+
+/* ---------- Work carousel ---------- */
+.work-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.work-carousel__track {
+  display: flex;
+  transition: transform 0.5s var(--ease);
+  will-change: transform;
+}
+.work-carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 2px;
+}
+.work-carousel__slide .work-card {
+  height: 100%;
+}
+.work-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+}
+.work-carousel__btn:hover { transform: translateY(-50%) scale(1.06); background: var(--mint-soft); }
+.work-carousel__btn--prev { left: 12px; }
+.work-carousel__btn--next { right: 12px; }
+.work-carousel__btn .ico { width: 18px; height: 18px; }
+.work-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.work-carousel__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+  padding: 0;
+}
+.work-carousel__dot.is-active {
+  background: var(--mint-deep);
+  transform: scale(1.25);
+}
+.work-cta {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+}
+.work-cta__note { color: var(--muted); font-size: 14px; }
+
+@media (max-width: 760px) {
+  .work-carousel__btn { width: 38px; height: 38px; }
+  .work-carousel__btn--prev { left: 6px; }
+  .work-carousel__btn--next { right: 6px; }
+}
