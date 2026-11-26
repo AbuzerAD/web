@@ -2928,6 +2928,7 @@ dialog::backdrop {
 /* ---------- Work carousel ---------- */
 .work-carousel {
   position: relative;
+  overflow: visible;
 }
 .work-carousel__track {
   display: flex;
@@ -2937,7 +2938,7 @@ dialog::backdrop {
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 4px 2px 16px;
+  padding: 16px 8px 40px;
 }
 .work-carousel__track::-webkit-scrollbar { display: none; }
 .work-carousel__slide {
