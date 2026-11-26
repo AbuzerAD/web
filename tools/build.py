@@ -22,7 +22,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261125c"
+ASSET_VERSION = "20261125d"
 
 # --------------------------------------------------------------------------
 # helpers
@@ -476,56 +476,10 @@ def logos_page():
   </section>
 
   <section class="container">
-    <div class="logos-carousel" id="logos-carousel">
-      <div class="logos-carousel__track" id="logos-carousel-track">
-        {"".join(f'<div class="logos-carousel__slide">{t}</div>' for t in tiles)}
-      </div>
-      <button class="logos-carousel__btn logos-carousel__btn--prev" type="button" id="logos-prev" aria-label="Previous marks">
-        <svg class="ico" aria-hidden="true"><use href="#i-arrow" style="transform:rotate(180deg)"/></svg>
-      </button>
-      <button class="logos-carousel__btn logos-carousel__btn--next" type="button" id="logos-next" aria-label="Next marks">
-        <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </button>
+    <div class="logos-grid">
+      {"".join(tiles)}
     </div>
-    <p class="logos-carousel__counter" id="logos-counter">1 – {min(4, len(shots))} of {len(shots)}</p>
   </section>
-  <script>
-  (function () {{
-    var track = document.getElementById('logos-carousel-track');
-    var prev = document.getElementById('logos-prev');
-    var next = document.getElementById('logos-next');
-    var counter = document.getElementById('logos-counter');
-    var total = {len(shots)};
-    if (!track) return;
-    function visibleCount() {{
-      var s = track.querySelector('.logos-carousel__slide');
-      if (!s) return 1;
-      return Math.max(1, Math.floor(track.clientWidth / (s.offsetWidth + 14)));
-    }}
-    function updateCounter() {{
-      if (!counter) return;
-      var s = track.querySelector('.logos-carousel__slide');
-      if (!s) return;
-      var per = visibleCount();
-      var idx = Math.round(track.scrollLeft / (s.offsetWidth + 14));
-      var start = idx + 1;
-      var end = Math.min(total, idx + per);
-      counter.textContent = start + ' – ' + end + ' of ' + total;
-    }}
-    function scrollByPage(dir) {{
-      var s = track.querySelector('.logos-carousel__slide');
-      if (!s) return;
-      var per = visibleCount();
-      var amount = (s.offsetWidth + 14) * per;
-      track.scrollBy({{ left: dir * amount, behavior: 'smooth' }});
-    }}
-    if (prev) prev.addEventListener('click', function () {{ scrollByPage(-1); }});
-    if (next) next.addEventListener('click', function () {{ scrollByPage(1); }});
-    track.addEventListener('scroll', updateCounter, {{ passive: true }});
-    updateCounter();
-    window.addEventListener('resize', updateCounter);
-  }})();
-  </script>
 </main>
 """
         + footer("")
