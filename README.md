@@ -55,8 +55,8 @@ Before publishing, deploy over HTTPS so the clipboard, fonts and share links all
 
 ## What is interactive
 
-- **Work gallery** — category filters with live counts, keyword search, empty state and a
-  “Showing X of 15 projects” status line.
+- **Selected work carousel** — top 5 projects in a scroll-snap carousel with prev/next
+  controls and dots, plus a “Browse all 15 case studies” link to `work/index.html`.
 - **Case-study dialog** — every card opens a quick-view with role, tools, overview and scope,
   plus a **Read full case study** link to that project's dedicated page. Deep links (`#p-<id>`)
   open a project directly, and the dialog supports **Next project**.
@@ -72,10 +72,14 @@ Before publishing, deploy over HTTPS so the clipboard, fonts and share links all
 - **Recommendations** — quote carousel with previous/next controls and auto-advance.
 - **Theme** — light/dark toggle, remembered in `localStorage` and applied before first paint to
   avoid a flash.
-- **Contact** — click-to-copy email, phone link, local Tampa time, social links and a project
+- **Contact** — click-to-copy email, phone link, local Dearborn, MI time, social links and a project
   brief form that composes a `mailto:` message in the visitor’s email app.
 - **Chrome** — sticky header with scroll progress, active-section highlighting, scroll reveal,
   animated hero stats, back-to-top and a reduced-motion fallback.
+- **Hero background** — 14-image rotating carousel (5 s per image, pure CSS crossfade) with a
+  dark overlay for readable text; contact section reuses a single image.
+- **Resume** — downloadable PDF (`assets/Abuzer-Ditta-Resume.pdf`) with a hero CTA button.
+- **Favicon** — derived from the brand logo’s red slash mark.
 
 ## Editing content
 
