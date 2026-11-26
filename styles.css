@@ -2928,25 +2928,32 @@ dialog::backdrop {
 /* ---------- Work carousel ---------- */
 .work-carousel {
   position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
 }
 .work-carousel__track {
   display: flex;
-  transition: transform 0.5s var(--ease);
-  will-change: transform;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 2px 16px;
 }
+.work-carousel__track::-webkit-scrollbar { display: none; }
 .work-carousel__slide {
-  flex: 0 0 100%;
+  flex: 0 0 88%;
+  scroll-snap-align: start;
   min-width: 0;
-  padding: 0 2px;
 }
-.work-carousel__slide .work-card {
-  height: 100%;
+@media (min-width: 640px) {
+  .work-carousel__slide { flex: 0 0 48%; }
+}
+@media (min-width: 980px) {
+  .work-carousel__slide { flex: 0 0 32%; }
 }
 .work-carousel__btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   z-index: 5;
   width: 44px;
@@ -2962,8 +2969,8 @@ dialog::backdrop {
   transition: transform 0.2s var(--ease), background 0.2s var(--ease);
 }
 .work-carousel__btn:hover { transform: translateY(-50%) scale(1.06); background: var(--mint-soft); }
-.work-carousel__btn--prev { left: 12px; }
-.work-carousel__btn--next { right: 12px; }
+.work-carousel__btn--prev { left: 4px; }
+.work-carousel__btn--next { right: 4px; }
 .work-carousel__btn .ico { width: 18px; height: 18px; }
 .work-carousel__dots {
   display: flex;
@@ -2996,6 +3003,6 @@ dialog::backdrop {
 
 @media (max-width: 760px) {
   .work-carousel__btn { width: 38px; height: 38px; }
-  .work-carousel__btn--prev { left: 6px; }
-  .work-carousel__btn--next { right: 6px; }
+  .work-carousel__btn--prev { left: 2px; }
+  .work-carousel__btn--next { right: 2px; }
 }

@@ -139,7 +139,6 @@
   const nextBtn = $("#work-next");
   const dotsEl = $("#work-dots");
   const featured = PROJECTS.slice(0, 5);
-  let current = 0;
 
   const projectCard = (project) => {
     const media = project.image
@@ -147,45 +146,43 @@
       : `<div class="work-card__tile" style="--tile-a:${project.tile[0]};--tile-b:${project.tile[1]}" aria-hidden="true"><span>${project.initials}</span></div>`;
 
     return `
-      <article class="work-card" data-cats="${project.cats.join(" ")}" data-search="${escapeHtml(
-        `${project.title} ${project.client} ${project.summary} ${project.tools} ${project.cats.join(" ")}`.toLowerCase()
-      )}">
-        <a class="work-card__link" href="#p-${project.id}" data-project="${project.id}" aria-haspopup="dialog">
-          <div class="work-card__media">
-            ${media}
-            <span class="work-card__tag">${project.catLabel}</span>
-            <span class="work-card__open">Open case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
-          </div>
-          <div class="work-card__body">
-            <div class="work-card__top">
-              <h3>${project.title}</h3>
-              <span class="work-card__arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+      <div class="work-carousel__slide">
+        <article class="work-card" data-cats="${project.cats.join(" ")}" data-search="${escapeHtml(
+          `${project.title} ${project.client} ${project.summary} ${project.tools} ${project.cats.join(" ")}`.toLowerCase()
+        )}">
+          <a class="work-card__link" href="#p-${project.id}" data-project="${project.id}" aria-haspopup="dialog">
+            <div class="work-card__media">
+              ${media}
+              <span class="work-card__tag">${project.catLabel}</span>
+              <span class="work-card__open">Open case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
             </div>
-            <p>${project.summary}</p>
-            <span class="work-card__client">${project.client} · ${project.role.split("—")[0].trim()}</span>
-          </div>
-        </a>
-      </article>`;
+            <div class="work-card__body">
+              <div class="work-card__top">
+                <h3>${project.title}</h3>
+                <span class="work-card__arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+              </div>
+              <p>${project.summary}</p>
+              <span class="work-card__client">${project.client} · ${project.role.split("—")[0].trim()}</span>
+            </div>
+          </a>
+        </article>
+      </div>`;
   };
 
-  const goTo = (index) => {
-    if (!track) return;
-    current = (index + featured.length) % featured.length;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    if (dotsEl) {
-      $$(".work-carousel__dot", dotsEl).forEach((dot, i) => {
-        const active = i === current;
-        dot.classList.toggle("is-active", active);
-        dot.setAttribute("aria-selected", String(active));
-      });
-    }
+  const updateDots = () => {
+    if (!track || !dotsEl) return;
+    const slideW = track.querySelector(".work-carousel__slide")?.offsetWidth || 1;
+    const gap = 18;
+    const idx = Math.round(track.scrollLeft / (slideW + gap));
+    $$(".work-carousel__dot", dotsEl).forEach((dot, i) => {
+      const active = i === idx;
+      dot.classList.toggle("is-active", active);
+      dot.setAttribute("aria-selected", String(active));
+    });
   };
 
   if (track) {
-    track.innerHTML = featured.map((project) => `
-      <div class="work-carousel__slide">
-        ${projectCard(project)}
-      </div>`).join("");
+    track.innerHTML = featured.map(projectCard).join("");
 
     if (dotsEl) {
       dotsEl.innerHTML = featured.map((project, i) => `
@@ -193,22 +190,32 @@
           aria-label="Show ${escapeHtml(project.title)}" aria-selected="${i === 0 ? "true" : "false"}">
         </button>`).join("");
       $$(".work-carousel__dot", dotsEl).forEach((dot, i) => {
-        dot.addEventListener("click", () => goTo(i));
+        dot.addEventListener("click", () => {
+          const slide = track.querySelectorAll(".work-carousel__slide")[i];
+          if (slide) track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
+        });
       });
     }
 
-    if (prevBtn) prevBtn.addEventListener("click", () => goTo(current - 1));
-    if (nextBtn) nextBtn.addEventListener("click", () => goTo(current + 1));
+    const scrollBySlide = (dir) => {
+      const slide = track.querySelector(".work-carousel__slide");
+      if (!slide) return;
+      const amount = slide.offsetWidth + 18;
+      track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    };
+    if (prevBtn) prevBtn.addEventListener("click", () => scrollBySlide(-1));
+    if (nextBtn) nextBtn.addEventListener("click", () => scrollBySlide(1));
 
     const carousel = $("#work-carousel");
     if (carousel) {
       carousel.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowLeft") { event.preventDefault(); goTo(current - 1); }
-        if (event.key === "ArrowRight") { event.preventDefault(); goTo(current + 1); }
+        if (event.key === "ArrowLeft") { event.preventDefault(); scrollBySlide(-1); }
+        if (event.key === "ArrowRight") { event.preventDefault(); scrollBySlide(1); }
       });
     }
 
-    goTo(0);
+    track.addEventListener("scroll", updateDots, { passive: true });
+    updateDots();
   }
 
   /* ---------------------------------------------------------
