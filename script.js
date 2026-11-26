@@ -219,56 +219,6 @@
   }
 
   /* ---------------------------------------------------------
-     Logos carousel (home) — top 18 of the Dribbble archive
-     --------------------------------------------------------- */
-  const logosTrack = $("#logos-carousel-track");
-  const logosPrev = $("#logos-prev");
-  const logosNext = $("#logos-next");
-  const logosCounter = $("#logos-counter");
-
-  const renderLogoTile = (shot) => {
-    const name = (shot.title || shot.slug.replace(/[-_]+/g, " ")).trim();
-    const path = `assets/logos/${shot.id}-${shot.slug}.webp`;
-    return `<div class="logos-carousel__slide"><a class="logo-tile" href="${escapeHtml(shot.url)}" target="_blank" rel="noopener"><img src="${path}" alt="${escapeHtml(shot.alt || name)}" loading="lazy" decoding="async" /><span>${escapeHtml(name)}</span></a></div>`;
-  };
-
-  const updateLogosCounter = () => {
-    if (!logosTrack || !logosCounter) return;
-    const slide = logosTrack.querySelector(".logos-carousel__slide");
-    if (!slide) return;
-    const per = Math.max(1, Math.floor(logosTrack.clientWidth / (slide.offsetWidth + 14)));
-    const idx = Math.round(logosTrack.scrollLeft / (slide.offsetWidth + 14));
-    const total = logosTrack.querySelectorAll(".logos-carousel__slide").length;
-    const start = idx + 1;
-    const end = Math.min(total, idx + per);
-    logosCounter.textContent = `${start} – ${end} of ${total}`;
-  };
-
-  if (logosTrack) {
-    fetch("tools/logos.json")
-      .then((r) => r.json())
-      .then((shots) => {
-        const top = (Array.isArray(shots) ? shots : []).slice(0, 18);
-        logosTrack.innerHTML = top.map(renderLogoTile).join("");
-        updateLogosCounter();
-      })
-      .catch(() => {
-        logosTrack.innerHTML = '<p class="work-empty">Could not load logos.</p>';
-      });
-
-    const scrollByPage = (dir) => {
-      const slide = logosTrack.querySelector(".logos-carousel__slide");
-      if (!slide) return;
-      const per = Math.max(1, Math.floor(logosTrack.clientWidth / (slide.offsetWidth + 14)));
-      logosTrack.scrollBy({ left: dir * (slide.offsetWidth + 14) * per, behavior: "smooth" });
-    };
-    if (logosPrev) logosPrev.addEventListener("click", () => scrollByPage(-1));
-    if (logosNext) logosNext.addEventListener("click", () => scrollByPage(1));
-    logosTrack.addEventListener("scroll", updateLogosCounter, { passive: true });
-    window.addEventListener("resize", updateLogosCounter);
-  }
-
-  /* ---------------------------------------------------------
      Project dialog
      --------------------------------------------------------- */
   const projectModal = $("#project-modal");
