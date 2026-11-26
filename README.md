@@ -76,8 +76,9 @@ Before publishing, deploy over HTTPS so the clipboard, fonts and share links all
   brief form that composes a `mailto:` message in the visitor’s email app.
 - **Chrome** — sticky header with scroll progress, active-section highlighting, scroll reveal,
   animated hero stats, back-to-top and a reduced-motion fallback.
-- **Hero background** — 14-image rotating carousel (5 s per image, pure CSS crossfade) with a
-  dark overlay for readable text; contact section reuses a single image.
+- **Hero background** — two clean, license-safe abstract images (dark iridescent glass and a
+  dark fluid sphere) crossfading every 5 s with a left-side scrim for readable copy; the contact
+  section reuses the glass image.
 - **Resume** — downloadable PDF (`assets/Abuzer-Ditta-Resume.pdf`) with a hero CTA button.
 - **Favicon** — derived from the brand logo’s red slash mark.
 
